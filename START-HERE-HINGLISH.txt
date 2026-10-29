@@ -1,0 +1,147 @@
+EDITLUME WEBSITE — BILKUL STARTING SE GUIDE
+==========================================
+
+BHAI, PEHLE BAS YE 5 CHEEZEIN KARO. SAARI FILES ALREADY CONNECTED HAIN.
+Tumhe HTML/CSS/React files ko manually link nahi karna hai.
+
+STEP 1 — DO SOFTWARE INSTALL KARO
+----------------------------------
+A) Node.js LTS: https://nodejs.org/en/download
+   - Website kholo.
+   - LTS version choose karke Windows installer download karo.
+   - Installer open karo, Next -> Next -> Install.
+   - Default settings rehne do.
+
+B) Visual Studio Code: https://code.visualstudio.com/
+   - Download for Windows par click karo.
+   - Installer open karke install karo.
+
+IMPORTANT: Node.js aur Python alag hain. React website chalane ke liye Node.js chahiye.
+
+STEP 2 — ZIP EXTRACT KARO
+-------------------------
+A) editlume-site.zip par right-click karo.
+B) Extract All select karo.
+C) Extract hone ke baad editlume-site naam ka folder milega.
+   Is folder ke andar package.json, index.html, src folder, README.md hone chahiye.
+
+STEP 3 — FOLDER VS CODE MEIN KHOLO
+----------------------------------
+A) VS Code kholo.
+B) Top menu: File -> Open Folder...
+C) Extract hua editlume-site folder select karo.
+D) Folder ke andar files left side Explorer mein dikhni chahiye.
+
+STEP 4 — TERMINAL KHOLO
+-----------------------
+A) VS Code top menu: Terminal -> New Terminal.
+B) Screen ke neeche ek command area khulega.
+C) Is command ko paste karo aur Enter dabao:
+
+   node -v
+
+D) Version number dikhna chahiye, jaise v22.x.x ya koi compatible LTS.
+E) Ab ye command paste karo:
+
+   npm -v
+
+F) Iska bhi version number dikhna chahiye.
+
+Agar 'node is not recognized' ya 'npm is not recognized' aaye:
+- Node.js LTS install hua hai ya nahi check karo.
+- VS Code ko poori tarah band karke dobara kholo.
+- Phir commands repeat karo.
+
+STEP 5 — PROJECT KE PACKAGES INSTALL KARO
+-----------------------------------------
+Isi terminal mein, ensure karo tum editlume-site folder mein ho.
+Phir ye command paste karo:
+
+   npm install
+
+Enter dabao. Pehli baar isko internet se project ke packages download karne honge.
+Complete hone tak terminal band mat karna.
+
+STEP 6 — WEBSITE CHALAO
+-----------------------
+Jab npm install complete ho jaaye, ye command chalao:
+
+   npm run dev
+
+Terminal mein local link milega, aam taur par:
+
+   http://localhost:5173/
+
+Link Ctrl+click karo ya use copy karke Chrome mein kholo.
+AB TUMHARI EDITLUME WEBSITE LAPTOP PAR CHAL RAHI HAI.
+
+IMPORTANT:
+- Website dekhte waqt terminal khula rehna chahiye.
+- Website stop karne ke liye terminal mein Ctrl + C dabao.
+- Dobara chalane ke liye npm run dev command repeat karo.
+- VS Code ka 'Go Live' button use karne ki zaroorat nahi; ye React + Vite project hai.
+
+FILES KA SIMPLE MATLAB
+----------------------
+index.html       = browser ki initial HTML file
+src/main.tsx     = React app start karta aur CSS import karta hai
+src/App.tsx      = website ke sections aur buttons ki functionality
+src/styles.css   = colors, sizes, spacing, responsive design
+package.json     = project ke required packages aur commands
+vite.config.ts   = Vite tool ki settings
+
+YE KAISE CONNECT HOTA HAI?
+--------------------------
+index.html ke andar src/main.tsx load hota hai.
+main.tsx React se App.tsx ko page par render karta hai aur styles.css load karta hai.
+App.tsx mein website ka structure aur interactions hain.
+styles.css mein uska design hai.
+Vite ye connection aur development server handle karta hai. Tumhe manual HTML link banane ki zaroorat nahi.
+
+TEXT CHANGE KARNA HO TOH
+------------------------
+1) src/App.tsx kholo.
+2) Ctrl + F dabao aur jis text ko change karna hai, search karo.
+   Example: Your Vision.
+3) Text change karo.
+4) Ctrl + S dabao.
+5) Chrome par wapas jao; local preview automatic refresh hona chahiye.
+
+COLORS / SPACING CHANGE KARNA HO TOH
+------------------------------------
+1) src/styles.css kholo.
+2) Ctrl + F se .hero, .button-dark, .services-grid jaise class names search karo.
+3) CSS value carefully change karo.
+4) Ctrl + S dabakar browser check karo.
+
+BUILD CHECK KARNA HO TOH
+------------------------
+Server ko Ctrl + C se stop karo. Phir:
+
+   npm run build
+
+Agar errors na aaye, production build dist folder mein generate hoga. Baad mein npm run dev se local preview dobara chala sakte ho.
+
+ABHI IS PROJECT MEIN KYA WORK KARTA HAI?
+---------------------------------------
+- Home / Services / About navigation
+- Header mein Portfolio link nahi hai
+- View Our Work opens Editlume brand introduction
+- Explore Selected Projects closes introduction and scrolls to projects
+- Project cards click karne par concept detail khulti hai
+- Get a Quote opens a form preview
+- Mobile menu aur Escape se modal close karna
+- Responsive layout for laptop/tablet/mobile
+
+IMPORTANT BEFORE CLIENT WEBSITE IS LIVE
+---------------------------------------
+- Contact form abhi demo hai. Ye email send nahi karta aur data database mein save nahi karta.
+- Project cards illustrative images/concept descriptions hain. Apne dost ka actual work add karo.
+- Testimonials sample placeholders hain; genuine feedback se replace karo ya remove karo.
+- Instagram, YouTube, LinkedIn icons generic social website links par jaate hain. Actual profile links add karo.
+- Images aur Google font ke liye internet chahiye.
+- Actual contact details milne par hi email, social links aur business information add karna.
+
+AGAR ERROR AAYE
+----------------
+Error ka screenshot lo aur ChatGPT ko bhejo. Screenshot mein terminal ka last part aur error message visible hona chahiye. Main exact next step bata dunga.
